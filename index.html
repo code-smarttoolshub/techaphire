@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech & Mobile Review</title>
+<title>Tech & Mobile Review v2.0</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:sans-serif;background:#F1F5F9;color:#1E293B;line-height:1.5}header{background:#0F172A;color:#fff;padding:25px;text-align:center}.container{max-width:1100px;margin:20px auto;padding:0 15px}.controls{background:#fff;padding:15px;border-radius:10px;margin-bottom:20px}.search-input{width:100%;padding:12px;border:2px solid #CBD5E1;border-radius:8px;font-size:16px}.brand-filters{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;justify-content:center}.filter-btn{background:#E2E8F0;border:none;padding:7px 14px;border-radius:15px;font-weight:bold;cursor:pointer}.filter-btn.active,.filter-btn:hover{background:#2563EB;color:#fff}.phones-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}.phone-card{background:#fff;border-radius:10px;padding:18px;border:1px solid #E2E8F0;display:flex;flex-direction:column;justify-content:space-between}.brand-tag{background:#DBEAFE;color:#1D4ED8;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:bold;display:inline-block;margin-bottom:6px}.specs-list{list-style:none;background:#F8FAFC;padding:10px;border-radius:6px;margin:10px 0;font-size:13px;border-left:3px solid #2563EB}.price-badge{background:#10B981;color:#fff;padding:6px;border-radius:5px;font-weight:bold;text-align:center;margin-top:10px}.seo-box{background:#fff;padding:25px;border-radius:10px;margin-top:30px}footer{background:#0F172A;color:#94A3B8;text-align:center;padding:20px;margin-top:30px}footer a{color:#60A5FA;text-decoration:none;margin:0 8px}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:sans-serif;background:#F1F5F9;color:#1E293B;line-height:1.5}header{background:#0F172A;color:#fff;padding:25px;text-align:center}.container{max-width:1100px;margin:20px auto;padding:0 15px}.controls{background:#fff;padding:15px;border-radius:10px;margin-bottom:20px}.search-input{width:100%;padding:12px;border:2px solid #CBD5E1;border-radius:8px;font-size:16px}.brand-filters{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;justify-content:center}.filter-btn{background:#E2E8F0;border:none;padding:7px 14px;border-radius:15px;font-weight:bold;cursor:pointer}.filter-btn.active,.filter-btn:hover{background:#2563EB;color:#fff}.phones-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}.phone-card{background:#fff;border-radius:10px;padding:18px;border:1px solid #E2E8F0;display:flex;flex-direction:column;justify-content:space-between}.brand-tag{background:#DBEAFE;color:#1D4ED8;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:bold;display:inline-block;margin-bottom:6px}.specs-list{list-style:none;background:#F8FAFC;padding:10px;border-radius:6px;margin:10px 0;font-size:13px;border-left:3px solid #2563EB}.price-badge{background:#10B981;color:#fff;padding:6px;border-radius:5px;font-weight:bold;text-align:center;margin-top:10px}footer{background:#0F172A;color:#94A3B8;text-align:center;padding:20px;margin-top:30px}
 </style>
 </head>
 <body>
@@ -23,17 +23,11 @@
 <button class="filter-btn" onclick="filterByBrand('Realme', this)">Realme</button>
 <button class="filter-btn" onclick="filterByBrand('Infinix', this)">Infinix</button>
 <button class="filter-btn" onclick="filterByBrand('Tecno', this)">Tecno</button>
-<button class="filter-btn" onclick="filterByBrand('OnePlus', this)">OnePlus</button>
-<button class="filter-btn" onclick="filterByBrand('Google', this)">Google</button>
 </div>
 </div>
 <div class="phones-grid" id="phonesContainer"></div>
-<div class="seo-box">
-<h2>Complete Smartphone Buying Guide</h2>
-<p style="margin-top:10px">Choosing the right smartphone requires comparing processors, camera sensors, display refresh rates, and battery life. At Tech & Mobile Review, we evaluate flagship and budget smartphones across Samsung, Apple, Xiaomi, Oppo, Vivo, Realme, Infinix, and Tecno to help you find the best value device.</p>
 </div>
-</div>
-<footer><p>&copy; 2026 Tech & Mobile Review</p><p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy</a></p></footer>
+<footer><p>&copy; 2026 Tech & Mobile Review - Updated</p></footer>
 <script>
 const phonesData=[
 {brand:"Samsung",name:"Galaxy S26 Ultra",display:"6.9 AMOLED 120Hz",processor:"Snapdragon 8 Elite",camera:"200MP Quad",battery:"5500mAh 65W",price:"$1,299",review:"Ultimate flagship with anti-reflective screen and S-Pen."},
@@ -51,11 +45,7 @@ const phonesData=[
 {brand:"Infinix",name:"Infinix Zero 40 5G",display:"6.78 Curved 144Hz",processor:"Dimensity 8200",camera:"108MP OIS + 50MP",battery:"5000mAh 45W",price:"$299",review:"144Hz display and wireless charging at a low price."},
 {brand:"Infinix",name:"Infinix Note 50 Pro+",display:"6.78 Curved 144Hz",processor:"Dimensity 8350",camera:"50MP Periscope",battery:"5200mAh 100W",price:"$349",review:"Periscope zoom and 50W magnetic wireless charging."},
 {brand:"Tecno",name:"Tecno Camon 40 Premier",display:"6.67 LTPO 144Hz",processor:"Dimensity 8350",camera:"50MP Sony Periscope",battery:"5100mAh 70W",price:"$399",review:"Flagship triple 50MP camera system with AI chip."},
-{brand:"Tecno",name:"Tecno Pova 7 Pro",display:"6.78 AMOLED 120Hz",processor:"Dimensity 7300",camera:"108MP Main",battery:"6000mAh 70W",price:"$249",review:"Gaming design with giant 6000mAh battery."},
-{brand:"OnePlus",name:"OnePlus 14",display:"6.82 2K AMOLED",processor:"Snapdragon 8 Elite",camera:"50MP Hasselblad",battery:"6100mAh 100W",price:"$799",review:"Clean OxygenOS software with 28-minute full charge."},
-{brand:"OnePlus",name:"OnePlus Nord 5",display:"6.74 1.5K AMOLED",processor:"Snapdragon 8s Gen 4",camera:"50MP Sony OIS",battery:"5500mAh 100W",price:"$429",review:"Flagship-killer speed in a metal-and-glass frame."},
-{brand:"Google",name:"Pixel 10 Pro XL",display:"6.8 Super Actua OLED",processor:"Google Tensor G5",camera:"50MP Triple 5x",battery:"5200mAh 45W",price:"$1,099",review:"Unmatched photography and smart on-device AI."},
-{brand:"Google",name:"Pixel 10a",display:"6.1 Actua OLED",processor:"Google Tensor G5",camera:"64MP OIS Dual",battery:"4600mAh 27W",price:"$499",review:"Best compact camera phone with 7 years of updates."}
+{brand:"Tecno",name:"Tecno Pova 7 Pro",display:"6.78 AMOLED 120Hz",processor:"Dimensity 7300",camera:"108MP Main",battery:"6000mAh 70W",price:"$249",review:"Gaming design with giant 6000mAh battery."}
 ];
 let currentBrand='All';
 function renderPhones(list){
