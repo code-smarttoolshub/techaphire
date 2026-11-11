@@ -1,136 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech & Mobile Review - Complete Smartphone Specs, Prices & Reviews</title>
-    <meta name="description" content="Explore complete smartphone specifications, detailed camera and gaming reviews, processor benchmarks, and latest tech guides on Tech & Mobile Review.">
-    <meta name="keywords" content="tech and mobile review, smartphone specs, iphone review, samsung galaxy specs, xiaomi review, best gaming phones, mobile comparison">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #F1F5F9; color: #1E293B; line-height: 1.6; }
-        header { background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%); color: white; padding: 35px 20px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        header h1 { font-size: 2.4rem; letter-spacing: 0.5px; font-weight: 800; }
-        header p { color: #CBD5E1; font-size: 1.05rem; margin-top: 8px; }
-        .container { max-width: 1150px; margin: 30px auto; padding: 0 20px; }
-        .adsense-box { background: #E2E8F0; border: 1px dashed #94A3B8; padding: 14px; margin: 20px 0; border-radius: 8px; text-align: center; color: #64748B; font-size: 12px; font-weight: bold; }
-        
-        .controls-area { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 25px; }
-        .search-input { width: 100%; padding: 14px 18px; border: 2px solid #CBD5E1; border-radius: 8px; font-size: 16px; outline: none; transition: 0.2s; }
-        .search-input:focus { border-color: #2563EB; }
-        .brand-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; justify-content: center; }
-        .filter-btn { background: #E2E8F0; border: none; padding: 8px 18px; border-radius: 20px; font-weight: 600; color: #334155; cursor: pointer; transition: 0.2s; font-size: 14px; }
-        .filter-btn.active, .filter-btn:hover { background: #2563EB; color: white; }
-
-        .phones-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 25px; }
-        .phone-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0; display: flex; flex-direction: column; justify-content: space-between; transition: 0.2s; }
-        .phone-card:hover { transform: translateY(-4px); border-color: #2563EB; }
-        .brand-tag { display: inline-block; background: #DBEAFE; color: #1D4ED8; padding: 4px 12px; border-radius: 15px; font-size: 12px; font-weight: bold; margin-bottom: 10px; }
-        .phone-card h2 { font-size: 1.4rem; color: #0F172A; margin-bottom: 12px; }
-        .specs-list { list-style: none; background: #F8FAFC; padding: 15px; border-radius: 8px; margin-bottom: 15px; font-size: 14px; border-left: 4px solid #2563EB; }
-        .specs-list li { margin-bottom: 6px; }
-        .specs-list strong { color: #0F172A; }
-        .review-text { font-size: 14px; color: #475569; text-align: justify; margin-bottom: 15px; }
-        .price-badge { background: #10B981; color: white; padding: 8px 14px; border-radius: 6px; font-weight: bold; text-align: center; font-size: 15px; }
-
-        .seo-articles { background: white; padding: 35px; border-radius: 12px; margin-top: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-top: 4px solid #2563EB; }
-        .seo-articles h2 { color: #0F172A; margin-bottom: 15px; font-size: 1.6rem; }
-        .seo-articles h3 { color: #1E3A8A; margin: 20px 0 10px; font-size: 1.2rem; }
-        .seo-articles p { color: #475569; margin-bottom: 15px; text-align: justify; font-size: 15px; }
-
-        footer { background: #0F172A; color: #94A3B8; text-align: center; padding: 30px 20px; margin-top: 50px; font-size: 14px; }
-        footer a { color: #60A5FA; text-decoration: none; margin: 0 12px; }
-        footer a:hover { text-decoration: underline; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech & Mobile Review - Smartphone Specs & Reviews</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;background:#F1F5F9;color:#1E293B;line-height:1.6}header{background:linear-gradient(135deg,#0F172A,#1E3A8A);color:#fff;padding:30px 20px;text-align:center}header h1{font-size:2.2rem;font-weight:800}.container{max-width:1100px;margin:25px auto;padding:0 20px}.controls{background:#fff;padding:20px;border-radius:12px;margin-bottom:25px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}.search-input{width:100%;padding:12px 16px;border:2px solid #CBD5E1;border-radius:8px;font-size:16px}.brand-filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px;justify-content:center}.filter-btn{background:#E2E8F0;border:none;padding:8px 16px;border-radius:20px;font-weight:600;cursor:pointer}.filter-btn.active,.filter-btn:hover{background:#2563EB;color:#fff}.phones-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:20px}.phone-card{background:#fff;border-radius:12px;padding:22px;border:1px solid #E2E8F0;display:flex;flex-direction:column;justify-content:space-between}.brand-tag{display:inline-block;background:#DBEAFE;color:#1D4ED8;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:bold;margin-bottom:8px}.specs-list{list-style:none;background:#F8FAFC;padding:12px;border-radius:8px;margin:12px 0;font-size:14px;border-left:4px solid #2563EB}.review-text{font-size:14px;color:#475569;margin-bottom:15px}.price-badge{background:#10B981;color:#fff;padding:8px;border-radius:6px;font-weight:bold;text-align:center}.seo-box{background:#fff;padding:30px;border-radius:12px;margin-top:35px;border-top:4px solid #2563EB}.seo-box h2,.seo-box h3{margin:15px 0 8px;color:#0F172A}.seo-box p{color:#475569;margin-bottom:12px;text-align:justify}footer{background:#0F172A;color:#94A3B8;text-align:center;padding:25px;margin-top:40px}footer a{color:#60A5FA;text-decoration:none;margin:0 10px}
+</style>
 </head>
 <body>
-
 <header>
-    <h1>📱 Tech & Mobile Review</h1>
-    <p>Complete Smartphone Database, Honest Camera & Gaming Reviews, and Tech Buying Guides</p>
+<h1>📱 Tech & Mobile Review</h1>
+<p>Complete Smartphone Database, Honest Camera & Gaming Reviews, and Tech Guides</p>
 </header>
-
 <div class="container">
-    <div class="adsense-box">GOOGLE ADSENSE DISPLAY BANNER (TOP)</div>
-
-    <div class="controls-area">
-        <input type="text" id="phoneSearch" class="search-input" placeholder="Search any phone by name, processor, or camera (e.g., iPhone, Samsung, Snapdragon)..." onkeyup="filterPhones()">
-        <div class="brand-filters">
-            <button class="filter-btn active" onclick="filterByBrand('All', this)">All Brands</button>
-            <button class="filter-btn" onclick="filterByBrand('Apple', this)">Apple iPhone</button>
-            <button class="filter-btn" onclick="filterByBrand('Samsung', this)">Samsung</button>
-            <button class="filter-btn" onclick="filterByBrand('Xiaomi', this)">Xiaomi</button>
-            <button class="filter-btn" onclick="filterByBrand('Google', this)">Google Pixel</button>
-            <button class="filter-btn" onclick="filterByBrand('OnePlus', this)">OnePlus</button>
-        </div>
-    </div>
-
-    <div class="phones-grid" id="phonesContainer"></div>
-
-    <div class="seo-articles">
-        <h2>Complete Smartphone Buying Guide & Technology Analysis</h2>
-        <p>Choosing the right smartphone in today's fast-moving technology market requires looking beyond marketing numbers. At <strong>Tech & Mobile Review</strong>, our editorial team tests and evaluates devices across real-world scenarios including battery endurance, thermal management during heavy gaming, low-light photography, and long-term software update reliability.</p>
-        
-        <h3>1. Understanding Mobile Processors & Gaming Performance</h3>
-        <p>The chipset is the brain of every smartphone. Flagship processors like the Apple A19 Pro and Qualcomm Snapdragon 8 Elite deliver console-grade ray tracing and smooth 120fps gameplay in demanding titles. For mid-range buyers, modern 4nm chipsets provide excellent power efficiency, ensuring your phone stays cool while handling multitasking and daily social media applications without lag.</p>
-
-        <h3>2. Camera Sensors vs. Image Processing</h3>
-        <p>A higher megapixel count does not automatically guarantee better photos. Sensor size, optical image stabilization (OIS), and computational photography algorithms play a much larger role. Phones equipped with large 1-inch sensors or advanced periscope telephoto lenses capture natural bokeh, accurate skin tones, and crisp night shots without artificial over-sharpening.</p>
-
-        <h3>3. Display Technology & Battery Longevity</h3>
-        <p>Modern LTPO AMOLED displays dynamically adjust refresh rates from 1Hz to 120Hz, saving significant battery life when reading static text while offering ultra-smooth scrolling. Combined with silicon-carbon high-density batteries exceeding 5000mAh and fast charging technologies, today's top smartphones easily last more than a full day of heavy usage.</p>
-    </div>
-
-    <div class="adsense-box">GOOGLE ADSENSE DISPLAY BANNER (BOTTOM)</div>
+<div class="controls">
+<input type="text" id="phoneSearch" class="search-input" placeholder="Search phone, processor, or camera (e.g., iPhone, Samsung, Snapdragon)..." onkeyup="filterPhones()">
+<div class="brand-filters">
+<button class="filter-btn active" onclick="filterByBrand('All', this)">All Brands</button>
+<button class="filter-btn" onclick="filterByBrand('Apple', this)">Apple iPhone</button>
+<button class="filter-btn" onclick="filterByBrand('Samsung', this)">Samsung</button>
+<button class="filter-btn" onclick="filterByBrand('Xiaomi', this)">Xiaomi</button>
+<button class="filter-btn" onclick="filterByBrand('Google', this)">Google Pixel</button>
+<button class="filter-btn" onclick="filterByBrand('OnePlus', this)">OnePlus</button>
 </div>
-
+</div>
+<div class="phones-grid" id="phonesContainer"></div>
+<div class="seo-box">
+<h2>Complete Smartphone Buying Guide & Technology Analysis</h2>
+<p>Choosing the right smartphone requires looking beyond marketing numbers. At Tech & Mobile Review, we evaluate devices across real-world scenarios including battery endurance, thermal management during gaming, low-light photography, and software update reliability.</p>
+<h3>1. Mobile Processors & Gaming Performance</h3>
+<p>Flagship chipsets like Apple A19 Pro and Snapdragon 8 Elite deliver smooth 120fps gameplay in demanding titles. Modern 4nm mid-range processors provide strong power efficiency, keeping your phone cool during multitasking and daily use.</p>
+<h3>2. Camera Sensors & Night Photography</h3>
+<p>Larger camera sensors and optical image stabilization (OIS) matter more than high megapixel counts. Phones with periscope telephoto lenses capture crisp zoom shots and natural portrait bokeh in low light.</p>
+</div>
+</div>
 <footer>
-    <p>&copy; 2026 Tech & Mobile Review. All Rights Reserved.</p>
-    <p style="margin-top: 10px;">
-        <a href="index.html">Home</a> | 
-        <a href="about.html">About Us</a> | 
-        <a href="contact.html">Contact Us</a> | 
-        <a href="privacy.html">Privacy Policy</a>
-    </p>
+<p>&copy; 2026 Tech & Mobile Review. All Rights Reserved.</p>
+<p style="margin-top:8px"><a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
 </footer>
-
 <script>
-    const phonesData = [
-        {
-            brand: "Apple",
-            name: "iPhone 17 Pro Max",
-            display: "6.9-inch Super Retina XDR LTPO OLED, 120Hz",
-            processor: "Apple A19 Pro (3nm)",
-            camera: "48MP Main + 48MP Ultra-Wide + 48MP 5x Tetraprism Telephoto",
-            battery: "4850 mAh, MagSafe & Fast Wired Charging",
-            price: "$1,199",
-            review: "The iPhone 17 Pro Max sets the industry benchmark for video recording and sustained gaming performance. Its titanium frame keeps weight balanced, while the upgraded telephoto lens captures stunning portraits even in dim lighting."
-        },
-        {
-            brand: "Samsung",
-            name: "Samsung Galaxy S26 Ultra",
-            display: "6.9-inch Dynamic AMOLED 2X, QHD+, 120Hz Anti-Reflective",
-            processor: "Snapdragon 8 Elite for Galaxy",
-            camera: "200MP Main + 50MP 5x Periscope + 10MP 3x + 50MP Ultra-Wide",
-            battery: "5500 mAh, 65W Fast Charging, Built-in S-Pen",
-            price: "$1,299",
-            review: "Samsung's flagship remains the ultimate productivity powerhouse. The anti-reflective screen makes outdoor visibility effortless, and the versatile quad-camera system handles everything from macro shots to 100x zoom."
-        },
-        {
-            brand: "Xiaomi",
-            name: "Xiaomi 16 Ultra",
-            display: "6.73-inch LTPO AMOLED, 3200 nits peak brightness",
-            processor: "Snapdragon 8 Elite",
-            camera: "50MP 1-inch Leica Main + 200MP Periscope Telephoto",
-            battery: "6000 mAh Silicon-Carbon, 90W HyperCharge",
-            price: "$999",
-            review: "Co-engineered with Leica, the Xiaomi 16 Ultra feels like a dedicated digital camera. Its massive 6000mAh battery easily powers through two days of moderate use, and 90W charging refills it in under 35 minutes."
-        },
-        {
-            brand: "Google",
-            name: "Google Pixel 10 Pro XL",
-            display: "6.8-inch Super Actua LTPO OLED, 1-120Hz",
-            processor: "Google Tensor G5 (TSMC 3nm)",
-            camera: "50MP Main + 48MP Ultra-Wide + 48MP 5x Optical Zoom",
-            battery: "5200 mAh, 45W Fast Charging",
-            price: "$1,099",
+const phonesData=[
+{brand:"Apple",name:"iPhone 17 Pro Max",display:"6.9-inch LTPO OLED, 120Hz",processor:"Apple A19 Pro (3nm)",camera:"48MP Main + 48MP Ultra-Wide + 48MP 5x Zoom",battery:"4850 mAh, MagSafe Charging",price:"$1,199",review:"Sets the benchmark for video recording and gaming performance with a balanced titanium frame."},
+{brand:"Samsung",name:"Samsung Galaxy S26 Ultra",display:"6.9-inch Dynamic AMOLED 2X, 120Hz",processor:"Snapdragon 8 Elite",camera:"200MP Main + 50MP 5x Periscope + 50MP Ultra-Wide",battery:"5500 mAh, 65W Charging, S-Pen",price:"$1,299",review:"The ultimate productivity flagship with an anti-reflective screen and versatile quad-camera zoom."},
+{brand:"Xiaomi",name:"Xiaomi 16 Ultra",display:"6.73-inch LTPO AMOLED, 3200 nits",processor:"Snapdragon 8 Elite",camera:"50MP 1-inch Leica Main + 200MP Periscope",battery:"6000 mAh, 90W HyperCharge",price:"$999",review:"Co-engineered with Leica, delivering DSLR-like portraits and two-day battery endurance."},
+{brand:"Google",name:"Google Pixel 10 Pro XL",display:"6.8-inch Super Actua OLED, 120Hz",processor:"Google Tensor G5 (3nm)",camera:"50MP Main + 48MP Ultra-Wide + 48MP 5x Zoom",battery:"5200 mAh, 45W Fast Charging",price:"$1,099",review:"Unmatched still photography with clean Night Sight processing and fast on-device AI tools."},
+{brand:"OnePlus",name:"OnePlus 14",display:"6.82-inch 2K AMOLED, 120Hz",processor:"Snapdragon 8 Elite",camera:"50MP Sony Hasselblad Triple Camera",battery:"6100 mAh, 100W Charger Included",price:"$799",review:"Unbeatable flagship value with bloat-free OxygenOS and a massive battery that charges in 28 minutes."},
+{brand:"Samsung",name:"Samsung Galaxy A56 5G",display:"6.6-inch Super AMOLED, 120Hz",processor:"Exynos 1580 (4nm)",camera:"50MP OIS Main + 12MP Ultra-Wide",battery:"5000 mAh, 45W Charging, IP67",price:"$449",review:"Best mid-range value offering premium glass build, 6 years of updates, and reliable daylight photos."}
+];
+let currentBrand='All';
+function renderPhones(list){
+const c=document.getElementById('phonesContainer');
+c.innerHTML=list.length===0?'<p style="text-align:center;grid-column:1/-1;padding:20px;">No phones matched your search.</p>':'';
+list.forEach(p=>{
+c.innerHTML+=`<div class="phone-card"><div><span class="brand-tag">${p.brand}</span><h2>${p.name}</h2><ul class="specs-list"><li><strong>Display:</strong> ${p.display}</li><li><strong>Processor:</strong> ${p.processor}</li><li><strong>Camera:</strong> ${p.camera}</li><li><strong>Battery:</strong> ${p.battery}</li></ul><p class="review-text">${p.review}</p></div><div class="price-badge">Price: ${p.price}</div></div>`;
+});
+}
+function filterByBrand(b,btn){
+currentBrand=b;
+document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('active'));
+btn.classList.add('active');
+filterPhones();
+}
+function filterPhones(){
+const q=document.getElementById('phoneSearch').value.toLowerCase();
+renderPhones(phonesData.filter(p=>(currentBrand==='All'||p.brand===currentBrand)&&(p.name.toLowerCase().includes(q)||p.processor.toLowerCase().includes(q)||p.brand.toLowerCase().includes(q))));
+}
+renderPhones(phonesData);
+</script>
+</body>
+</html>
