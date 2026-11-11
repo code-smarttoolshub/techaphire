@@ -23,6 +23,12 @@
 <button class="filter-btn" onclick="filterByBrand('Xiaomi', this)">Xiaomi</button>
 <button class="filter-btn" onclick="filterByBrand('Google', this)">Google Pixel</button>
 <button class="filter-btn" onclick="filterByBrand('OnePlus', this)">OnePlus</button>
+ <button class="filter-btn" onclick="filterByBrand('Oppo', this)">Oppo</button>
+<button class="filter-btn" onclick="filterByBrand('Vivo', this)">Vivo</button>
+<button class="filter-btn" onclick="filterByBrand('Realme', this)">Realme</button>
+<button class="filter-btn" onclick="filterByBrand('Infinix', this)">Infinix</button>
+<button class="filter-btn" onclick="filterByBrand('Tecno', this)">Tecno</button>
+ 
 </div>
 </div>
 <div class="phones-grid" id="phonesContainer"></div>
@@ -41,12 +47,49 @@
 </footer>
 <script>
 const phonesData=[
-{brand:"Apple",name:"iPhone 17 Pro Max",display:"6.9-inch LTPO OLED, 120Hz",processor:"Apple A19 Pro (3nm)",camera:"48MP Main + 48MP Ultra-Wide + 48MP 5x Zoom",battery:"4850 mAh, MagSafe Charging",price:"$1,199",review:"Sets the benchmark for video recording and gaming performance with a balanced titanium frame."},
-{brand:"Samsung",name:"Samsung Galaxy S26 Ultra",display:"6.9-inch Dynamic AMOLED 2X, 120Hz",processor:"Snapdragon 8 Elite",camera:"200MP Main + 50MP 5x Periscope + 50MP Ultra-Wide",battery:"5500 mAh, 65W Charging, S-Pen",price:"$1,299",review:"The ultimate productivity flagship with an anti-reflective screen and versatile quad-camera zoom."},
-{brand:"Xiaomi",name:"Xiaomi 16 Ultra",display:"6.73-inch LTPO AMOLED, 3200 nits",processor:"Snapdragon 8 Elite",camera:"50MP 1-inch Leica Main + 200MP Periscope",battery:"6000 mAh, 90W HyperCharge",price:"$999",review:"Co-engineered with Leica, delivering DSLR-like portraits and two-day battery endurance."},
-{brand:"Google",name:"Google Pixel 10 Pro XL",display:"6.8-inch Super Actua OLED, 120Hz",processor:"Google Tensor G5 (3nm)",camera:"50MP Main + 48MP Ultra-Wide + 48MP 5x Zoom",battery:"5200 mAh, 45W Fast Charging",price:"$1,099",review:"Unmatched still photography with clean Night Sight processing and fast on-device AI tools."},
-{brand:"OnePlus",name:"OnePlus 14",display:"6.82-inch 2K AMOLED, 120Hz",processor:"Snapdragon 8 Elite",camera:"50MP Sony Hasselblad Triple Camera",battery:"6100 mAh, 100W Charger Included",price:"$799",review:"Unbeatable flagship value with bloat-free OxygenOS and a massive battery that charges in 28 minutes."},
-{brand:"Samsung",name:"Samsung Galaxy A56 5G",display:"6.6-inch Super AMOLED, 120Hz",processor:"Exynos 1580 (4nm)",camera:"50MP OIS Main + 12MP Ultra-Wide",battery:"5000 mAh, 45W Charging, IP67",price:"$449",review:"Best mid-range value offering premium glass build, 6 years of updates, and reliable daylight photos."}
+{brand:"Samsung",name:"Samsung Galaxy S26 Ultra",display:"6.9-inch AMOLED, 120Hz",processor:"Snapdragon 8 Elite",camera:"200MP Quad Camera",battery:"5500 mAh, 65W",price:"$1,299",review:"Ultimate productivity flagship with anti-reflective screen and S-Pen."},
+{brand:"Samsung",name:"Samsung Galaxy S26 Plus",display:"6.7-inch AMOLED, 120Hz",processor:"Snapdragon 8 Elite",camera:"50MP Triple Camera",battery:"4900 mAh, 45W",price:"$999",review:"Balanced flagship offering sharp QHD+ screen and smooth performance."},
+{brand:"Samsung",name:"Samsung Galaxy Z Fold 7",display:"8.0-inch Foldable AMOLED",processor:"Snapdragon 8 Elite",camera:"200MP Main Camera",battery:"4600 mAh, 45W",price:"$1,799",review:"Thinner foldable powerhouse built for heavy multitasking and gaming."},
+{brand:"Samsung",name:"Samsung Galaxy A56 5G",display:"6.6-inch Super AMOLED",processor:"Exynos 1580",camera:"50MP OIS Triple",battery:"5000 mAh, 45W",price:"$449",review:"Top mid-range choice with glass build and 6 years of updates."},
+{brand:"Samsung",name:"Samsung Galaxy A36 5G",display:"6.6-inch Super AMOLED",processor:"Snapdragon 6 Gen 3",camera:"50MP OIS Triple",battery:"5000 mAh, 45W",price:"$349",review:"Affordable everyday phone with bright screen and IP67 rating."},
+{brand:"Apple",name:"iPhone 17 Pro Max",display:"6.9-inch LTPO OLED, 120Hz",processor:"Apple A19 Pro",camera:"48MP Triple + 5x Zoom",battery:"4850 mAh, MagSafe",price:"$1,199",review:"Industry leader for pro video recording and gaming in titanium body."},
+{brand:"Apple",name:"iPhone 17 Pro",display:"6.3-inch LTPO OLED, 120Hz",processor:"Apple A19 Pro",camera:"48MP Triple + 5x Zoom",battery:"3700 mAh, MagSafe",price:"$999",review:"Compact pro flagship delivering desktop-class gaming and cameras."},
+{brand:"Apple",name:"iPhone 17 Air",display:"6.6-inch Thin OLED, 120Hz",processor:"Apple A19",camera:"48MP Fusion Camera",battery:"3600 mAh, MagSafe",price:"$899",review:"Apple's slimmest ever iPhone with lightweight aluminum frame."},
+{brand:"Apple",name:"iPhone 17",display:"6.1-inch OLED, 120Hz",processor:"Apple A19",camera:"48MP Dual Camera",battery:"3800 mAh, USB-C",price:"$799",review:"Standard model finally brings smooth 120Hz ProMotion display."},
+{brand:"Apple",name:"iPhone 16 Pro Max",display:"6.9-inch LTPO OLED, 120Hz",processor:"Apple A18 Pro",camera:"48MP Triple + 5x Zoom",battery:"4685 mAh, MagSafe",price:"$1,099",review:"Features Camera Control button and massive battery endurance."},
+{brand:"Xiaomi",name:"Xiaomi 16 Ultra",display:"6.73-inch LTPO AMOLED",processor:"Snapdragon 8 Elite",camera:"50MP 1-inch Leica + 200MP",battery:"6000 mAh, 90W",price:"$999",review:"Co-engineered with Leica for DSLR-like photography."},
+{brand:"Xiaomi",name:"Xiaomi 16 Pro",display:"6.73-inch 2K AMOLED",processor:"Snapdragon 8 Elite",camera:"50MP Leica Triple Camera",battery:"6100 mAh, 120W",price:"$799",review:"Ultra-fast 120W charging flagship with bright 2K screen."},
+{brand:"Xiaomi",name:"Redmi Note 15 Pro+ 5G",display:"6.67-inch Curved AMOLED",processor:"Snapdragon 7s Gen 4",camera:"200MP OIS Main Camera",battery:"6200 mAh, 90W",price:"$379",review:"Curved screen mid-ranger with IP68 rating and giant battery."},
+{brand:"Xiaomi",name:"Poco F7 Ultra",display:"6.67-inch 2K 120Hz AMOLED",processor:"Snapdragon 8 Elite",camera:"50MP OIS Triple Camera",battery:"6000 mAh, 120W",price:"$549",review:"Pure gaming beast offering flagship speed at half the price."},
+{brand:"Xiaomi",name:"Poco X7 Pro",display:"6.67-inch 1.5K AMOLED",processor:"Dimensity 8400 Ultra",camera:"50MP Sony OIS Main",battery:"6000 mAh, 90W",price:"$329",review:"Best budget gaming phone with liquid cooling and fast charging."},
+{brand:"Oppo",name:"Oppo Find X8 Pro",display:"6.78-inch LTPO AMOLED",processor:"Dimensity 9400",camera:"50MP Quad Dual-Periscope",battery:"5910 mAh, 80W",price:"$949",review:"Dual periscope zoom lenses and Hasselblad color tuning."},
+{brand:"Oppo",name:"Oppo Find N5",display:"8.1-inch Foldable AMOLED",processor:"Snapdragon 8 Elite",camera:"50MP Hasselblad Triple",battery:"5600 mAh, 80W",price:"$1,599",review:"World's thinnest book-style foldable smartphone."},
+{brand:"Oppo",name:"Oppo Reno 14 Pro 5G",display:"6.83-inch Curved AMOLED",processor:"Dimensity 8450",camera:"50MP OIS + 50MP Telephoto",battery:"5800 mAh, 80W",price:"$549",review:"Portrait specialist with IP69 water resistance."},
+{brand:"Oppo",name:"Oppo F29 Pro 5G",display:"6.7-inch Curved AMOLED",processor:"Dimensity 7300 Energy",camera:"50MP OIS Main Camera",battery:"6000 mAh, 80W",price:"$310",review:"360-degree armor body with two-day battery backup."},
+{brand:"Oppo",name:"Oppo A5 Pro",display:"6.67-inch 120Hz Display",processor:"Dimensity 6300",camera:"50MP AI Dual Camera",battery:"5800 mAh, 45W",price:"$220",review:"Shock-resistant daily driver with loud dual speakers."},
+{brand:"Vivo",name:"Vivo X200 Ultra",display:"6.82-inch 2K LTPO AMOLED",processor:"Snapdragon 8 Elite",camera:"50MP Dual + 200MP ZEISS",battery:"6000 mAh, 90W",price:"$1,099",review:"Ultimate camera flagship with dedicated V3+ imaging chip."},
+{brand:"Vivo",name:"Vivo X200 Pro",display:"6.78-inch ZEISS AMOLED",processor:"Dimensity 9400",camera:"50MP Sony + 200MP ZEISS",battery:"6000 mAh, 90W",price:"$929",review:"Unmatched telephoto macro and portrait photography."},
+{brand:"Vivo",name:"Vivo V50 Pro",display:"6.78-inch Curved AMOLED",processor:"Dimensity 9300+",camera:"50MP ZEISS + Aura Light",battery:"5500 mAh, 90W",price:"$499",review:"Ultra-slim phone with studio Aura Light for night portraits."},
+{brand:"Vivo",name:"Vivo T3 Ultra",display:"6.78-inch 1.5K AMOLED",processor:"Dimensity 9200+",camera:"50MP Sony OIS Main",battery:"5500 mAh, 80W",price:"$359",review:"Performance-focused phone for gamers and power users."},
+{brand:"Vivo",name:"Vivo Y300 Plus",display:"6.78-inch Curved AMOLED",processor:"Snapdragon 695",camera:"50MP Dual AI Camera",battery:"5000 mAh, 44W",price:"$240",review:"Budget curved screen smartphone with sleek design."},
+{brand:"Realme",name:"Realme GT 7 Pro",display:"6.78-inch Eco2 OLED",processor:"Snapdragon 8 Elite",camera:"50MP Sony + 50MP Periscope",battery:"6500 mAh, 120W",price:"$699",review:"Speed demon with giant 6500mAh battery and 120W charging."},
+{brand:"Realme",name:"Realme 14 Pro+ 5G",display:"6.83-inch Curved OLED",processor:"Snapdragon 7s Gen 3",camera:"50MP OIS + 50MP Periscope",battery:"6000 mAh, 80W",price:"$369",review:"Periscope zoom photography and color-changing back design."},
+{brand:"Realme",name:"Realme Narzo 70 Turbo",display:"6.67-inch OLED 120Hz",processor:"Dimensity 7300 Energy",camera:"50MP AI Main Camera",battery:"5000 mAh, 45W",price:"$215",review:"Affordable gaming smartphone with vapor chamber cooling."},
+{brand:"Realme",name:"Realme C75",display:"6.72-inch FHD+ 90Hz",processor:"Helio G92 Max",camera:"50MP AI Camera",battery:"6000 mAh, 45W",price:"$169",review:"IP69 dust and water resistant budget smartphone."},
+{brand:"Infinix",name:"Infinix Zero 40 5G",display:"6.78-inch Curved 144Hz",processor:"Dimensity 8200 Ultimate",camera:"108MP OIS + 50MP Ultra",battery:"5000 mAh, 45W + Wireless",price:"$299",review:"144Hz display, GoPro mode, and wireless charging at low price."},
+{brand:"Infinix",name:"Infinix Note 50 Pro+ 5G",display:"6.78-inch Curved 144Hz",processor:"Dimensity 8350",camera:"50MP OIS Periscope + 50MP",battery:"5200 mAh, 100W + 50W Wireless",price:"$349",review:"Periscope zoom and 50W magnetic wireless charging in mid-range."},
+{brand:"Infinix",name:"Infinix GT 20 Pro",display:"6.78-inch 144Hz AMOLED",processor:"Dimensity 8200 Ultimate",camera:"108MP OIS Triple Camera",battery:"5000 mAh, 45W",price:"$289",review:"Dedicated gaming chip with Cyber Mecha LED back design."},
+{brand:"Infinix",name:"Infinix Hot 50 Pro+",display:"6.78-inch Curved AMOLED",processor:"Helio G100",camera:"50MP Main + AI Lens",battery:"5000 mAh, 33W",price:"$185",review:"Slimmest 3D-curved budget phone with JBL dual speakers."},
+{brand:"Tecno",name:"Tecno Camon 40 Premier",display:"6.67-inch LTPO 144Hz",processor:"Dimensity 8350",camera:"50MP Sony + 50MP Periscope",battery:"5100 mAh, 70W",price:"$399",review:"Flagship-grade triple 50MP camera system with AI imaging chip."},
+{brand:"Tecno",name:"Tecno Phantom V Fold 2",display:"7.85-inch Foldable LTPO",processor:"Dimensity 9000+",camera:"50MP Triple Camera",battery:"5750 mAh, 70W",price:"$1,099",review:"Affordable large-screen foldable with stylus support."},
+{brand:"Tecno",name:"Tecno Pova 7 Pro 5G",display:"6.78-inch AMOLED 120Hz",processor:"Dimensity 7300",camera:"108MP Main Camera",battery:"6000 mAh, 70W",price:"$249",review:"Gaming design with giant 6000mAh battery and bypass charging."},
+{brand:"Tecno",name:"Tecno Spark 30 Pro",display:"6.78-inch AMOLED 120Hz",processor:"Helio G100",camera:"108MP Main Camera",battery:"5000 mAh, 33W",price:"$165",review:"High-value budget phone with 108MP camera and stereo sound."},
+{brand:"OnePlus",name:"OnePlus 14",display:"6.82-inch 2K AMOLED",processor:"Snapdragon 8 Elite",camera:"50MP Hasselblad Triple",battery:"6100 mAh, 100W",price:"$799",review:"Clean OxygenOS software with 28-minute full charging."},
+{brand:"OnePlus",name:"OnePlus Nord 5",display:"6.74-inch 1.5K AMOLED",processor:"Snapdragon 8s Gen 4",camera:"50MP Sony OIS Main",battery:"5500 mAh, 100W",price:"$429",review:"Flagship-killer speed in a metal-and-glass frame."},
+{brand:"Google",name:"Google Pixel 10 Pro XL",display:"6.8-inch Super Actua OLED",processor:"Google Tensor G5",camera:"50MP Triple + 5x Zoom",battery:"5200 mAh, 45W",price:"$1,099",review:"Unmatched point-and-shoot photography and smart AI features."},
+{brand:"Google",name:"Google Pixel 10a",display:"6.1-inch Actua OLED",processor:"Google Tensor G5",camera:"64MP OIS Dual Camera",battery:"4600 mAh, 27W",price:"$499",review:"Best compact camera phone under $500 with 7 years updates."}
+
+  
 ];
 let currentBrand='All';
 function renderPhones(list){
