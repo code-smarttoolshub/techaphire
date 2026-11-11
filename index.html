@@ -15,7 +15,6 @@
         .container { max-width: 1150px; margin: 30px auto; padding: 0 20px; }
         .adsense-box { background: #E2E8F0; border: 1px dashed #94A3B8; padding: 14px; margin: 20px 0; border-radius: 8px; text-align: center; color: #64748B; font-size: 12px; font-weight: bold; }
         
-        /* Search and Filter Bar */
         .controls-area { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 25px; }
         .search-input { width: 100%; padding: 14px 18px; border: 2px solid #CBD5E1; border-radius: 8px; font-size: 16px; outline: none; transition: 0.2s; }
         .search-input:focus { border-color: #2563EB; }
@@ -23,7 +22,6 @@
         .filter-btn { background: #E2E8F0; border: none; padding: 8px 18px; border-radius: 20px; font-weight: 600; color: #334155; cursor: pointer; transition: 0.2s; font-size: 14px; }
         .filter-btn.active, .filter-btn:hover { background: #2563EB; color: white; }
 
-        /* Phone Cards Grid */
         .phones-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 25px; }
         .phone-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0; display: flex; flex-direction: column; justify-content: space-between; transition: 0.2s; }
         .phone-card:hover { transform: translateY(-4px); border-color: #2563EB; }
@@ -35,7 +33,6 @@
         .review-text { font-size: 14px; color: #475569; text-align: justify; margin-bottom: 15px; }
         .price-badge { background: #10B981; color: white; padding: 8px 14px; border-radius: 6px; font-weight: bold; text-align: center; font-size: 15px; }
 
-        /* Heavy SEO Content Section */
         .seo-articles { background: white; padding: 35px; border-radius: 12px; margin-top: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-top: 4px solid #2563EB; }
         .seo-articles h2 { color: #0F172A; margin-bottom: 15px; font-size: 1.6rem; }
         .seo-articles h3 { color: #1E3A8A; margin: 20px 0 10px; font-size: 1.2rem; }
@@ -56,7 +53,6 @@
 <div class="container">
     <div class="adsense-box">GOOGLE ADSENSE DISPLAY BANNER (TOP)</div>
 
-    <!-- Search and Filter Controls -->
     <div class="controls-area">
         <input type="text" id="phoneSearch" class="search-input" placeholder="Search any phone by name, processor, or camera (e.g., iPhone, Samsung, Snapdragon)..." onkeyup="filterPhones()">
         <div class="brand-filters">
@@ -69,10 +65,8 @@
         </div>
     </div>
 
-    <!-- Dynamic Phone Cards Grid -->
     <div class="phones-grid" id="phonesContainer"></div>
 
-    <!-- Heavy SEO Buying Guides for AdSense Approval -->
     <div class="seo-articles">
         <h2>Complete Smartphone Buying Guide & Technology Analysis</h2>
         <p>Choosing the right smartphone in today's fast-moving technology market requires looking beyond marketing numbers. At <strong>Tech & Mobile Review</strong>, our editorial team tests and evaluates devices across real-world scenarios including battery endurance, thermal management during heavy gaming, low-light photography, and long-term software update reliability.</p>
@@ -138,3 +132,5 @@
             display: "6.8-inch Super Actua LTPO OLED, 1-120Hz",
             processor: "Google Tensor G5 (TSMC 3nm)",
             camera: "50MP Main + 48MP Ultra-Wide + 48MP 5x Optical Zoom",
+            battery: "5200 mAh, 45W Fast Charging",
+            price: "$1,099",
