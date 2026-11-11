@@ -3,21 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech & Mobile Review - Smartphone Specs & Reviews</title>
+<title>Tech & Mobile Review</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;background:#F1F5F9;color:#1E293B;line-height:1.6}header{background:linear-gradient(135deg,#0F172A,#1E3A8A);color:#fff;padding:30px 20px;text-align:center}header h1{font-size:2.2rem;font-weight:800}.container{max-width:1150px;margin:25px auto;padding:0 20px}.controls{background:#fff;padding:20px;border-radius:12px;margin-bottom:25px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}.search-input{width:100%;padding:12px 16px;border:2px solid #CBD5E1;border-radius:8px;font-size:16px}.brand-filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px;justify-content:center}.filter-btn{background:#E2E8F0;border:none;padding:8px 15px;border-radius:20px;font-weight:600;cursor:pointer;font-size:13px}.filter-btn.active,.filter-btn:hover{background:#2563EB;color:#fff}.phones-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:20px}.phone-card{background:#fff;border-radius:12px;padding:22px;border:1px solid #E2E8F0;display:flex;flex-direction:column;justify-content:space-between}.brand-tag{display:inline-block;background:#DBEAFE;color:#1D4ED8;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:bold;margin-bottom:8px}.specs-list{list-style:none;background:#F8FAFC;padding:12px;border-radius:8px;margin:12px 0;font-size:13.5px;border-left:4px solid #2563EB}.specs-list li{margin-bottom:4px}.review-text{font-size:14px;color:#475569;margin-bottom:15px}.price-badge{background:#10B981;color:#fff;padding:8px;border-radius:6px;font-weight:bold;text-align:center}.seo-box{background:#fff;padding:30px;border-radius:12px;margin-top:35px;border-top:4px solid #2563EB}.seo-box h2,.seo-box h3{margin:15px 0 8px;color:#0F172A}.seo-box p{color:#475569;margin-bottom:12px;text-align:justify}footer{background:#0F172A;color:#94A3B8;text-align:center;padding:25px;margin-top:40px}footer a{color:#60A5FA;text-decoration:none;margin:0 10px}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:sans-serif;background:#F1F5F9;color:#1E293B;line-height:1.5}header{background:#0F172A;color:#fff;padding:25px;text-align:center}.container{max-width:1100px;margin:20px auto;padding:0 15px}.controls{background:#fff;padding:15px;border-radius:10px;margin-bottom:20px}.search-input{width:100%;padding:12px;border:2px solid #CBD5E1;border-radius:8px;font-size:16px}.brand-filters{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;justify-content:center}.filter-btn{background:#E2E8F0;border:none;padding:7px 14px;border-radius:15px;font-weight:bold;cursor:pointer}.filter-btn.active,.filter-btn:hover{background:#2563EB;color:#fff}.phones-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}.phone-card{background:#fff;border-radius:10px;padding:18px;border:1px solid #E2E8F0;display:flex;flex-direction:column;justify-content:space-between}.brand-tag{background:#DBEAFE;color:#1D4ED8;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:bold;display:inline-block;margin-bottom:6px}.specs-list{list-style:none;background:#F8FAFC;padding:10px;border-radius:6px;margin:10px 0;font-size:13px;border-left:3px solid #2563EB}.price-badge{background:#10B981;color:#fff;padding:6px;border-radius:5px;font-weight:bold;text-align:center;margin-top:10px}.seo-box{background:#fff;padding:25px;border-radius:10px;margin-top:30px}footer{background:#0F172A;color:#94A3B8;text-align:center;padding:20px;margin-top:30px}footer a{color:#60A5FA;text-decoration:none;margin:0 8px}
 </style>
 </head>
 <body>
-<header>
-<h1>📱 Tech & Mobile Review</h1>
-<p>Complete Smartphone Database, Honest Camera & Gaming Reviews, and Tech Guides</p>
-</header>
+<header><h1>📱 Tech & Mobile Review</h1><p>Complete Smartphone Database & Honest Reviews</p></header>
 <div class="container">
 <div class="controls">
-<input type="text" id="phoneSearch" class="search-input" placeholder="Search phone, processor, or brand (e.g., S26, iPhone, Oppo, Infinix, Snapdragon)..." onkeyup="filterPhones()">
+<input type="text" id="phoneSearch" class="search-input" placeholder="Search any phone or brand..." onkeyup="filterPhones()">
 <div class="brand-filters">
-<button class="filter-btn active" onclick="filterByBrand('All', this)">All Brands</button>
+<button class="filter-btn active" onclick="filterByBrand('All', this)">All</button>
 <button class="filter-btn" onclick="filterByBrand('Samsung', this)">Samsung</button>
 <button class="filter-btn" onclick="filterByBrand('Apple', this)">Apple</button>
 <button class="filter-btn" onclick="filterByBrand('Xiaomi', this)">Xiaomi</button>
@@ -27,42 +24,48 @@
 <button class="filter-btn" onclick="filterByBrand('Infinix', this)">Infinix</button>
 <button class="filter-btn" onclick="filterByBrand('Tecno', this)">Tecno</button>
 <button class="filter-btn" onclick="filterByBrand('OnePlus', this)">OnePlus</button>
-<button class="filter-btn" onclick="filterByBrand('Google', this)">Google Pixel</button>
+<button class="filter-btn" onclick="filterByBrand('Google', this)">Google</button>
 </div>
 </div>
 <div class="phones-grid" id="phonesContainer"></div>
 <div class="seo-box">
-<h2>Complete Smartphone Buying Guide & Technology Analysis</h2>
-<p>Choosing the right smartphone in today's market requires comparing processors, camera sensors, display refresh rates, and charging speeds. At Tech & Mobile Review, our database covers flagship devices alongside high-value budget phones from Samsung, Apple, Xiaomi, Oppo, Vivo, Realme, Infinix, and Tecno.</p>
-<h3>1. Flagship vs. Mid-Range & Budget Processors</h3>
-<p>Flagship chips like Snapdragon 8 Elite, Apple A19 Pro, and Dimensity 9400 handle heavy 3D gaming at 120fps effortlessly. Meanwhile, modern mid-range chips like Helio G100, Dimensity 7300, and Snapdragon 7s Gen 3 offer smooth daily multitasking and strong battery efficiency at affordable prices.</p>
-<h3>2. Camera Sensors & Night Photography</h3>
-<p>Optical Image Stabilization (OIS) and larger sensor sizes matter far more than high megapixel numbers alone. Flagships feature 1-inch sensors and periscope zoom lenses, while modern budget phones now include 50MP and 108MP main sensors for crisp daylight shots.</p>
+<h2>Complete Smartphone Buying Guide</h2>
+<p style="margin-top:10px">Choosing the right smartphone requires comparing processors, camera sensors, display refresh rates, and battery life. At Tech & Mobile Review, we evaluate flagship and budget smartphones across Samsung, Apple, Xiaomi, Oppo, Vivo, Realme, Infinix, and Tecno to help you find the best value device.</p>
 </div>
 </div>
-<footer>
-<p>&copy; 2026 Tech & Mobile Review. All Rights Reserved.</p>
-<p style="margin-top:8px"><a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
-</footer>
+<footer><p>&copy; 2026 Tech & Mobile Review</p><p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy</a></p></footer>
 <script>
 const phonesData=[
-{brand:"Samsung",name:"Samsung Galaxy S26 Ultra",display:"6.9-inch AMOLED, 120Hz",processor:"Snapdragon 8 Elite",camera:"200MP Quad Camera",battery:"5500 mAh, 65W",price:"$1,299",review:"Ultimate productivity flagship with anti-reflective screen and S-Pen."},
-{brand:"Samsung",name:"Samsung Galaxy S26 Plus",display:"6.7-inch AMOLED, 120Hz",processor:"Snapdragon 8 Elite",camera:"50MP Triple Camera",battery:"4900 mAh, 45W",price:"$999",review:"Balanced flagship offering sharp QHD+ screen and smooth performance."},
-{brand:"Samsung",name:"Samsung Galaxy Z Fold 7",display:"8.0-inch Foldable AMOLED",processor:"Snapdragon 8 Elite",camera:"200MP Main Camera",battery:"4600 mAh, 45W",price:"$1,799",review:"Thinner foldable powerhouse built for heavy multitasking and gaming."},
-{brand:"Samsung",name:"Samsung Galaxy A56 5G",display:"6.6-inch Super AMOLED",processor:"Exynos 1580",camera:"50MP OIS Triple",battery:"5000 mAh, 45W",price:"$449",review:"Top mid-range choice with glass build and 6 years of updates."},
-{brand:"Samsung",name:"Samsung Galaxy A36 5G",display:"6.6-inch Super AMOLED",processor:"Snapdragon 6 Gen 3",camera:"50MP OIS Triple",battery:"5000 mAh, 45W",price:"$349",review:"Affordable everyday phone with bright screen and IP67 rating."},
-{brand:"Apple",name:"iPhone 17 Pro Max",display:"6.9-inch LTPO OLED, 120Hz",processor:"Apple A19 Pro",camera:"48MP Triple + 5x Zoom",battery:"4850 mAh, MagSafe",price:"$1,199",review:"Industry leader for pro video recording and gaming in titanium body."},
-{brand:"Apple",name:"iPhone 17 Pro",display:"6.3-inch LTPO OLED, 120Hz",processor:"Apple A19 Pro",camera:"48MP Triple + 5x Zoom",battery:"3700 mAh, MagSafe",price:"$999",review:"Compact pro flagship delivering desktop-class gaming and cameras."},
-{brand:"Apple",name:"iPhone 17 Air",display:"6.6-inch Thin OLED, 120Hz",processor:"Apple A19",camera:"48MP Fusion Camera",battery:"3600 mAh, MagSafe",price:"$899",review:"Apple's slimmest ever iPhone with lightweight aluminum frame."},
-{brand:"Apple",name:"iPhone 17",display:"6.1-inch OLED, 120Hz",processor:"Apple A19",camera:"48MP Dual Camera",battery:"3800 mAh, USB-C",price:"$799",review:"Standard model finally brings smooth 120Hz ProMotion display."},
-{brand:"Apple",name:"iPhone 16 Pro Max",display:"6.9-inch LTPO OLED, 120Hz",processor:"Apple A18 Pro",camera:"48MP Triple + 5x Zoom",battery:"4685 mAh, MagSafe",price:"$1,099",review:"Features Camera Control button and massive battery endurance."},
-{brand:"Xiaomi",name:"Xiaomi 16 Ultra",display:"6.73-inch LTPO AMOLED",processor:"Snapdragon 8 Elite",camera:"50MP 1-inch Leica + 200MP",battery:"6000 mAh, 90W",price:"$999",review:"Co-engineered with Leica for DSLR-like photography."},
-{brand:"Xiaomi",name:"Xiaomi 16 Pro",display:"6.73-inch 2K AMOLED",processor:"Snapdragon 8 Elite",camera:"50MP Leica Triple Camera",battery:"6100 mAh, 120W",price:"$799",review:"Ultra-fast 120W charging flagship with bright 2K screen."},
-{brand:"Xiaomi",name:"Redmi Note 15 Pro+ 5G",display:"6.67-inch Curved AMOLED",processor:"Snapdragon 7s Gen 4",camera:"200MP OIS Main Camera",battery:"6200 mAh, 90W",price:"$379",review:"Curved screen mid-ranger with IP68 rating and giant battery."},
-{brand:"Xiaomi",name:"Poco F7 Ultra",display:"6.67-inch 2K 120Hz AMOLED",processor:"Snapdragon 8 Elite",camera:"50MP OIS Triple Camera",battery:"6000 mAh, 120W",price:"$549",review:"Pure gaming beast offering flagship speed at half the price."},
-{brand:"Xiaomi",name:"Poco X7 Pro",display:"6.67-inch 1.5K AMOLED",processor:"Dimensity 8400 Ultra",camera:"50MP Sony OIS Main",battery:"6000 mAh, 90W",price:"$329",review:"Best budget gaming phone with liquid cooling and fast charging."},
-{brand:"Oppo",name:"Oppo Find X8 Pro",display:"6.78-inch LTPO AMOLED",processor:"Dimensity 9400",camera:"50MP Quad Dual-Periscope",battery:"5910 mAh, 80W",price:"$949",review:"Dual periscope zoom lenses and Hasselblad color tuning."},
-{brand:"Oppo",name:"Oppo Find N5",display:"8.1-inch Foldable AMOLED",processor:"Snapdragon 8 Elite",camera:"50MP Hasselblad Triple",battery:"5600 mAh, 80W",price:"$1,599",review:"World's thinnest book-style foldable smartphone."},
-{brand:"Oppo",name:"Oppo Reno 14 Pro 5G",display:"6.83-inch Curved AMOLED",processor:"Dimensity 8450",camera:"50MP OIS + 50MP Telephoto",battery:"5800 mAh, 80W",price:"$549",review:"Portrait specialist with IP69 water resistance."},
-{brand:"Oppo",name:"Oppo F29 Pro 5G",display:"6.7-inch Curved AMOLED",processor:"Dimensity 7300 Energy",camera:"50MP OIS Main Camera",battery:"6000 mAh, 80W",price:"$310",review:"360-degree armor body with two-day battery backup."},
-{brand:"Oppo",name:"Oppo A5 Pro",display:"6.67-inch 120Hz Display",processor:"Dimensity 6300",camera:"50MP AI Dual Camera",battery:"5800 mAh, 45W",price:"$220",review:"Shock-resistant daily driver with loud dual speakers."},
+{brand:"Samsung",name:"Galaxy S26 Ultra",display:"6.9 AMOLED 120Hz",processor:"Snapdragon 8 Elite",camera:"200MP Quad",battery:"5500mAh 65W",price:"$1,299",review:"Ultimate flagship with anti-reflective screen and S-Pen."},
+{brand:"Samsung",name:"Galaxy A56 5G",display:"6.6 Super AMOLED",processor:"Exynos 1580",camera:"50MP OIS Triple",battery:"5000mAh 45W",price:"$449",review:"Premium glass build with 6 years of updates."},
+{brand:"Apple",name:"iPhone 17 Pro Max",display:"6.9 LTPO OLED",processor:"Apple A19 Pro",camera:"48MP Triple 5x",battery:"4850mAh",price:"$1,199",review:"Best pro video recording and gaming in titanium body."},
+{brand:"Apple",name:"iPhone 17",display:"6.1 OLED 120Hz",processor:"Apple A19",camera:"48MP Dual",battery:"3800mAh",price:"$799",review:"Brings smooth 120Hz ProMotion display to standard model."},
+{brand:"Xiaomi",name:"Xiaomi 16 Ultra",display:"6.73 LTPO AMOLED",processor:"Snapdragon 8 Elite",camera:"50MP 1-inch Leica",battery:"6000mAh 90W",price:"$999",review:"Co-engineered with Leica for DSLR-like photography."},
+{brand:"Xiaomi",name:"Redmi Note 15 Pro+",display:"6.67 Curved AMOLED",processor:"Snapdragon 7s Gen 4",camera:"200MP OIS",battery:"6200mAh 90W",price:"$379",review:"Curved screen mid-ranger with giant 6200mAh battery."},
+{brand:"Oppo",name:"Oppo Find X8 Pro",display:"6.78 LTPO AMOLED",processor:"Dimensity 9400",camera:"50MP Hasselblad",battery:"5910mAh 80W",price:"$949",review:"Dual periscope zoom lenses and Hasselblad colors."},
+{brand:"Oppo",name:"Oppo Reno 14 Pro",display:"6.83 Curved AMOLED",processor:"Dimensity 8450",camera:"50MP OIS Telephoto",battery:"5800mAh 80W",price:"$549",review:"Stylish portrait phone with IP69 water resistance."},
+{brand:"Vivo",name:"Vivo X200 Pro",display:"6.78 ZEISS AMOLED",processor:"Dimensity 9400",camera:"200MP ZEISS APO",battery:"6000mAh 90W",price:"$929",review:"Unmatched telephoto macro and portrait photography."},
+{brand:"Vivo",name:"Vivo V50 Pro",display:"6.78 Curved AMOLED",processor:"Dimensity 9300+",camera:"50MP ZEISS Aura",battery:"5500mAh 90W",price:"$499",review:"Ultra-slim design with studio Aura Light for portraits."},
+{brand:"Realme",name:"Realme GT 7 Pro",display:"6.78 Eco2 OLED",processor:"Snapdragon 8 Elite",camera:"50MP Sony Periscope",battery:"6500mAh 120W",price:"$699",review:"Massive 6500mAh battery and blazing 120W charging."},
+{brand:"Realme",name:"Realme 14 Pro+",display:"6.83 Curved OLED",processor:"Snapdragon 7s Gen 3",camera:"50MP OIS Periscope",battery:"6000mAh 80W",price:"$369",review:"True periscope zoom and color-changing back design."},
+{brand:"Infinix",name:"Infinix Zero 40 5G",display:"6.78 Curved 144Hz",processor:"Dimensity 8200",camera:"108MP OIS + 50MP",battery:"5000mAh 45W",price:"$299",review:"144Hz display and wireless charging at a low price."},
+{brand:"Infinix",name:"Infinix Note 50 Pro+",display:"6.78 Curved 144Hz",processor:"Dimensity 8350",camera:"50MP Periscope",battery:"5200mAh 100W",price:"$349",review:"Periscope zoom and 50W magnetic wireless charging."},
+{brand:"Tecno",name:"Tecno Camon 40 Premier",display:"6.67 LTPO 144Hz",processor:"Dimensity 8350",camera:"50MP Sony Periscope",battery:"5100mAh 70W",price:"$399",review:"Flagship triple 50MP camera system with AI chip."},
+{brand:"Tecno",name:"Tecno Pova 7 Pro",display:"6.78 AMOLED 120Hz",processor:"Dimensity 7300",camera:"108MP Main",battery:"6000mAh 70W",price:"$249",review:"Gaming design with giant 6000mAh battery."},
+{brand:"OnePlus",name:"OnePlus 14",display:"6.82 2K AMOLED",processor:"Snapdragon 8 Elite",camera:"50MP Hasselblad",battery:"6100mAh 100W",price:"$799",review:"Clean OxygenOS software with 28-minute full charge."},
+{brand:"OnePlus",name:"OnePlus Nord 5",display:"6.74 1.5K AMOLED",processor:"Snapdragon 8s Gen 4",camera:"50MP Sony OIS",battery:"5500mAh 100W",price:"$429",review:"Flagship-killer speed in a metal-and-glass frame."},
+{brand:"Google",name:"Pixel 10 Pro XL",display:"6.8 Super Actua OLED",processor:"Google Tensor G5",camera:"50MP Triple 5x",battery:"5200mAh 45W",price:"$1,099",review:"Unmatched photography and smart on-device AI."},
+{brand:"Google",name:"Pixel 10a",display:"6.1 Actua OLED",processor:"Google Tensor G5",camera:"64MP OIS Dual",battery:"4600mAh 27W",price:"$499",review:"Best compact camera phone with 7 years of updates."}
+];
+let currentBrand='All';
+function renderPhones(list){
+const c=document.getElementById('phonesContainer');
+c.innerHTML=list.length===0?'<p style="text-align:center;grid-column:1/-1;">No phones found.</p>':'';
+list.forEach(p=>{c.innerHTML+=`<div class="phone-card"><div><span class="brand-tag">${p.brand}</span><h3>${p.name}</h3><ul class="specs-list"><li><b>Display:</b> ${p.display}</li><li><b>Chip:</b> ${p.processor}</li><li><b>Camera:</b> ${p.camera}</li><li><b>Battery:</b> ${p.battery}</li></ul><p style="font-size:13.5px;color:#475569">${p.review}</p></div><div class="price-badge">${p.price}</div></div>`;});
+}
+function filterByBrand(b,btn){currentBrand=b;document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('active'));btn.classList.add('active');filterPhones();}
+function filterPhones(){const q=document.getElementById('phoneSearch').value.toLowerCase();renderPhones(phonesData.filter(p=>(currentBrand==='All'||p.brand===currentBrand)&&(p.name.toLowerCase().includes(q)||p.brand.toLowerCase().includes(q)||p.processor.toLowerCase().includes(q))));}
+renderPhones(phonesData);
+</script>
+</body>
+</html>
