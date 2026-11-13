@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://sitemaps.org">
-  <url><loc>https://vercel.app</loc></url>
-  <url><loc>https://vercel.appabout.html</loc></url>
-  <url><loc>https://vercel.appcontact.html</loc></url>
-  <url><loc>https://vercel.appprivacy.html</loc></url>
+  <url>
+    <loc>https://techaphire.vercel.app/</loc>
+  </url>
+  <url>
+    <loc>https://vercel.app</loc>
+  </url>
+  <url>
+    <loc>https://vercel.app</loc>
+  </url>
+  <url>
+    <loc>https://vercel.app</loc>
+  </url>
 </urlset>
